@@ -4,12 +4,17 @@ const UserCard = ({ user }) => {
 
   return (
     <>
-      <div key={user.id}>
+      <div className="user-card" key={user.id}>
         <img src={`${user.avatar_url}`} alt={user.id} />
-        <h4>{user.name}</h4>
-        <p>Repos: {user.public_repos}</p>
-        <p>Following: {user.following}</p>
-        <p>Followers {user.followers}</p>
+        <div className="card-info">
+          <h4>{user.name}</h4>
+          <p>Repos: {user.public_repos}</p>
+          <p>Following: {user.following}</p>
+          <p>Followers {user.followers}</p>
+        </div>
+        <div>
+          <a href={user.html_url} rel="noopener noreferrer" target="_blank">{user.html_url}</a>                      
+        </div> 
       </div>
     </>
   )

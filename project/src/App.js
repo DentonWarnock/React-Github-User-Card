@@ -15,7 +15,6 @@ class App extends React.Component {
       followersList: []
     };
   }
-
   
   componentDidMount() {
     fetch(`https://api.github.com/users/${gitAccountName}`)
@@ -51,10 +50,7 @@ class App extends React.Component {
         //   })
         // })  
         .catch(err => console.log(err))             
-      } 
-       
-  
-  
+      }  
   
   render() {
     console.log(this.state.followers)

@@ -6,9 +6,11 @@ const FollowersList = ({ followers }) => {
   return (
     <>
     <h2>Followers</h2>
-    {followers.map(item => 
-      <FollowerCard user={item} key={item.id} />
-    )}
+    <div className="followers">
+      {followers.map(item => 
+        <FollowerCard user={item} key={item.id} />
+      )}
+    </div>
     </>
   )
 }
