@@ -1,16 +1,16 @@
 import React from 'react';
 
 
-const FollowerCard = (props) => {
+const FollowerCard = ({ user }) => {
 
-  console.log("Follower Card: user: ", props.user)
+  console.log("Follower Card: user: ", user)
 
   return (
     <>    
-      <div key={props.user.id}>        
-        <img src={`${props.user.avatar_url}`} alt="user"/>
-        <p>{props.user.id}</p>
-        <p>{props.user.login}</p>
+      <div key={user.id}>  
+        <img src={`${user.avatar_url}`} alt={user.login}/>
+        <p>{user.login}</p>
+        <a href={user.html_url} rel="noopener noreferrer" target="_blank">{user.html_url}</a>                      
       </div>     
     </>
   )

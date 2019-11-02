@@ -5,7 +5,7 @@ const FollowersList = ({ followers }) => {
 
   return (
     <>
-    <div>{followers.length}</div>
+    <h2>Followers</h2>
     {followers.map(item => 
       <FollowerCard user={item} key={item.id} />
     )}

@@ -60,7 +60,7 @@ class App extends React.Component {
     console.log(this.state.followers)
     return (
       <div className="App">
-        <h1>GitHub Users</h1>
+        <h1>GitHub User: {this.state.user.name}</h1>
         <UserCard user={this.state.user} key={this.state.user.id} />
         <FollowersList followers={this.state.followers} key={this.state.followers.id} />
       </div>
